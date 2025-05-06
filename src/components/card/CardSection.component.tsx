@@ -1,30 +1,27 @@
-// @components/card/CardSection.tsx
 import React from "react";
-import { Card } from "@components/card/Card"; // Import Card component
-import { cardData } from "./cardData.data"; // Import card data
+import { Card } from "@components/card/Card";
+import { cardData } from "./cardData.data";
 
 const CardSection: React.FC = () => {
     return (
-        <div className="bg-[#F1F6FE] w-full py-12"> {/* Full width color background */}
-
-            {/* Text Section */}
-            <div className="text-center mb-8"> {/* Text section */}
-                <h2 className="text-3xl font-bold">Why BitPointX + Optimus AI</h2>
-                <p className="text-gray-700 mt-2">Support systems have evolved, so should you</p>
+        <section className="bg-[#F1F6FE] w-full py-16 px-4">
+            {/* Header */}
+            <div className="text-center max-w-2xl mx-auto mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                    Why BitPointX + Optimus AI
+                </h2>
+                <p className="text-gray-600 mt-4">
+                    Support systems have evolved, so should you
+                </p>
             </div>
 
-            {/* Cards Section */}
-            <div className="flex justify-center gap-8"> {/* Centered cards with equal gaps */}
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {cardData.map((card, index) => (
-                    <div
-                        key={index}
-                        className="w-[408px] h-[364px] bg-white p-8 rounded-lg shadow-lg"
-                    >
-                        <Card {...card} />
-                    </div>
+                    <Card key={index} {...card} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
