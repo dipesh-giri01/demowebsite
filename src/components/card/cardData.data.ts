@@ -1,5 +1,5 @@
 // @components/card/cardData.ts
-import Logo from "@assets/image.webp"; // Example image for cards
+// Example image for cards
 import AI from "@assets/AI.png";
 import Scale from "@assets/Scale.png"
 import Shutdown from "@assets/Shutdown.png" // Example image for cards
