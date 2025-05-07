@@ -2,6 +2,9 @@ import Navbar from "@components/navbar/Navbar"
 import Info from "@assets/img_1.png"
 import CardSection from "@components/card/CardSection.component"
 import Button from "@components/navbar/Button"
+import TicketCard from "@components/ticketcard/TicketCard.component"
+import OverView from "@components/overview/Overview.component"
+import SpotLight from "@components/spotlight/Spotlight.component"
 
 const HomePage = () => {
     return (
@@ -44,7 +47,9 @@ const HomePage = () => {
             {/* Move outside constrained div */}
             <CardSection />
 
-            <div className="text-gray-500 mt-8 text-center">TicketCard</div>
+            <TicketCard />
+            <OverView />
+            <SpotLight />
         </>
     )
 }
