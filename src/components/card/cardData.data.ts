@@ -1,8 +1,8 @@
 // @components/card/cardData.ts
 // Example image for cards
-import AI from "@assets/AI.png";
-import Scale from "@assets/Scale.png"
-import Shutdown from "@assets/Shutdown.png" // Example image for cards
+import AI from "@assets/AI.svg";
+import Scale from "@assets/Scale.svg"
+import Shutdown from "@assets/Shutdown.svg" // Example image for cards
 export const cardData = [
   {
     imageSrc: AI,

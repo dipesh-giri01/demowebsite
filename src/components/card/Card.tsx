@@ -1,32 +1,32 @@
+// Card.tsx
 interface CardProps {
-  imageSrc: string
-  title: string
-  description: string
+  imageSrc: string;
+  title: string;
+  description: string;
+  className?: string;
 }
 
-export function Card({ imageSrc, title, description }: CardProps) {
+export function Card({ imageSrc, title, description, className }: CardProps) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div className={`bg-white rounded-3xl shadow-sm flex flex-col h-full ${className}`}>
       {/* Image Container */}
-      <div className="flex justify-center items-center p-4">
+      <div className="flex justify-center items-center p-6 h-[140px]">
         <img
           src={imageSrc}
           alt={title}
-          className="max-h-32 object-contain"
+          className="max-h-[80px] object-contain"
         />
       </div>
 
       {/* Card Body */}
-      <div className="p-5 text-center">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <div className="p-6 pt-0 text-center flex flex-col flex-grow">
+        <h5 className="mb-3 text-xl font-bold text-gray-900">
           {title}
         </h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="text-gray-700 flex-grow">
           {description}
         </p>
       </div>
     </div>
-  )
+  );
 }
-
-export default Card
