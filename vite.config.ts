@@ -10,5 +10,5 @@ export default defineConfig({
     tsconfigPaths(),
     tailwindcss()
   ],
-  base: process.env.VITE_BASE_PATH || '/demowebsite',
+  base: process.env.VITE_BASE_PATH || '/',
 })
